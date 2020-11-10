@@ -23,8 +23,8 @@ public class DataManager : MonoBehaviour
 
         // Below informations are given
         User = new User("2019-11181");
-        Music = new Music("1", "adele", "hello", "idon'tknow", "who?", Music.MEDIUM);
-        Score = new Score(121, 0, 50, 1);
+        Music = new Music("1", "someone like you", "adele", "idon'tknow", "who?", Music.MEDIUM,"Pop / Jazz");
+        Score = new Score(291, 87, 50, 1,188);
 
         AddResults(DataDirPath+Music.Id+".txt", Score);
     }
