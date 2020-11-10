@@ -20,6 +20,7 @@ public class DataManager : MonoBehaviour
     void Awake()
     {
         DataDirPath = Application.dataPath+"/Data/";
+        //ResetData(DataDirPath);
 
         // Below informations are given
         User = new User("2019-11181");
@@ -38,5 +39,15 @@ public class DataManager : MonoBehaviour
                 sw.WriteLine(score.ToString());
             }
         }
+    }
+
+    private void ResetData(string dataDirPath)
+    {
+        string[] filenames = Directory.GetFiles(dataDirPath);
+        for(int i=0; i<filenames.Length; i++)
+        {
+            File.Delete(filenames[i]);
+        }
+
     }
 }

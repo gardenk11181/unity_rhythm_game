@@ -25,12 +25,11 @@ public class UIManager : MonoBehaviour
         music = dataManager.Music;
 
         // access Text
-        TextAccess();
-        TextWrite();
-        
+        AccessText();
+        WriteText();
     }
 
-    private void TextAccess()
+    private void AccessText()
     {
         songTitle = GameObject.Find("SongTitle").GetComponent<Text>();
         singer = GameObject.Find("Singer").GetComponent<Text>();
@@ -43,7 +42,7 @@ public class UIManager : MonoBehaviour
         scoreText = GameObject.Find("Score").GetComponent<Text>();
     }
 
-    private void TextWrite()
+    private void WriteText()
     {
         songTitle.text = music.Name;
         singer.text = music.Singer;
